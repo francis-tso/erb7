@@ -6,7 +6,7 @@ from django.forms import NumberInput
 from django.db import models
 
 class ListingAdmin(admin.ModelAdmin):
-    list_display = 'id','title', 'is_published', 'doctor'
+    list_display = ('id','title','district','is_published','rooms', 'doctor')
     list_display_links = 'id', 'title'
     list_filter = "doctor",
     list_editable =("is_published"), 
