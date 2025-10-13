@@ -11,7 +11,7 @@
               </div>
               <div class="card-body">
                 {% comment %}  {% endcomment %}
-                <form action="{% url  'pages:index' %}" method="POST">
+                <form action="{% url  'accounts:login' %}" method="POST">
                     {% csrf_token %}
                   <div class="form-group">
                     <label for="username">Username</label>
