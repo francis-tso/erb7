@@ -44,10 +44,12 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'debug_toolbar',
     'taggit',
+    'widget_tweaks',
     'pages.apps.PagesConfig',
     'listings.apps.ListingsConfig',
     'doctors.apps.DoctorsConfig',
     'accounts.apps.AccountsConfig',
+    'contacts.apps.ContactsConfig',
 ]
 
 MIDDLEWARE = [ 
@@ -147,3 +149,12 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',
     messages.SUCCESS: 'success',
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.ccom'  
+EMAIL_PORT = 587  
+EMAIL_USE_TLS = True 
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+DEFAULT_FROM_EMAIL = 'tsokt@gmail.com'  
+
